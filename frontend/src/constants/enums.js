@@ -1,1 +1,1 @@
-export const ROLES=['admin','analyst','viewer'];export const STATUSES={queued:'排队中',running:'计算中',completed:'已完成',failed:'失败'};
+export const ROLES=['admin','analyst','viewer'];export const STATUSES={queued:'排队中',running:'计算中',completed:'已完成',failed:'失败'};export const BILL_STATUSES={draft:'草稿',reconciled:'已对平',no_solution:'无解',ambiguous:'多解',stale:'已失效'};

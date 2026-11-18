@@ -11,6 +11,10 @@ def demo_rows():
  rng=random.Random(42);rows=[]
  for i in range(240):
   activity=['电力','柴油','通勤'][i%3];unit={'电力':'kWh','柴油':'L','通勤':'km'}[activity];rows.append({'period':'2026-'+('10' if i<120 else '11'),'department':['材料试验室','工艺试验室','光学试验室'][i%3],'activity':activity,'quantity':round(rng.uniform(2,300),3),'unit':unit})
+ # 电费账单对账样例：办公区 2026-12 的三条电力底稿合并为一条 800 kWh 账单行（含 MWh 换算）
+ rows.append({'period':'2026-12','department':'办公区','activity':'电力','quantity':500,'unit':'kWh'})
+ rows.append({'period':'2026-12','department':'办公区','activity':'电力','quantity':100,'unit':'kWh'})
+ rows.append({'period':'2026-12','department':'办公区','activity':'电力','quantity':0.2,'unit':'MWh'})
  return rows
 
 def seed():
